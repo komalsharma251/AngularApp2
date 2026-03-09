@@ -1,0 +1,29 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="form">
+
+  <div class="field">
+  <input type="text" formControlName="title" placeholder=" " autofocus />
+  <label>Task Title</label>
+</div>
+
+<div class="field">
+  <select formControlName="priority">
+    <option value="" disabled selected hidden></option>
+    <option value="Low">Low priority</option>
+    <option value="Medium">Medium priority</option>
+    <option value="High">High priority</option>
+  </select>
+  <label>Priority</label>
+</div>
+
+<div class="field">
+  <input type="date" formControlName="dueDate" placeholder=" " />
+  <label>Due Date</label>
+</div>
+
+<div class="field">
+  <textarea formControlName="description" rows="2" placeholder=" "></textarea>
+  <label>Description (Optional)</label>
+</div>
+  <button type="submit" [disabled]="form.invalid">Add Task</button>
+
+</form>

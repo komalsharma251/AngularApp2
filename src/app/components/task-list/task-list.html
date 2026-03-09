@@ -1,0 +1,28 @@
+<!-- Controls -->
+ 
+<div class="controls">
+  <label>
+    Filter:
+    <select [(ngModel)]="filter" (ngModelChange)="applyFilter()">
+      <option value="all">All</option>
+      <option value="active">Active</option>
+      <option value="completed">Completed</option>
+      <option value="overdue">Overdue</option>
+    </select>
+  </label>
+
+  <button (click)="clearCompleted()">
+    Clear Completed
+  </button>
+</div>
+
+<!-- Task List -->
+<div class="task-list">
+  <app-task-item
+    *ngFor="let t of filteredTasks$ | async; trackBy: trackById"
+    [task]="t"
+    (toggle)="toggle($event)"
+    (remove)="remove($event)"
+  >
+  </app-task-item>
+</div>

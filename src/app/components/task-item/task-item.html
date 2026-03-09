@@ -1,0 +1,27 @@
+<div
+  class="item"
+  appTaskStatus
+  [appTaskStatusCompleted]="task.completed"
+  [appTaskStatusPriority]="task.priority"
+>
+  <label class="title">
+    <input
+      type="checkbox"
+      [checked]="task.completed"
+      (change)="toggle.emit(task.id)"
+    />
+    <span>{{ task.title }}</span>
+  </label>
+
+  <div class="meta">
+    <small>{{ task.dueDate | dueDateLabel }}</small>
+    <small class="priority">• {{ task.priority | titlecase }}</small>
+    <button (click)="remove.emit(task.id)" class="danger">
+      Remove
+    </button>
+  </div>
+
+  <p class="desc" *ngIf="task.description">
+    {{ task.description | truncate:140 }}
+  </p>
+</div>

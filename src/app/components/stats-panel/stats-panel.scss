@@ -1,0 +1,24 @@
+$blue: #3b82f6;
+$orange: #f59e0b;
+$green: #22c55e;
+$red: #ef4444;
+
+.stats {
+  display: flex;
+  gap: 15px;
+  margin: 20px 0;
+
+  .stat {
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    color: white;
+    min-width: 110px;
+    text-align: center;
+  }
+
+  .total { background: $blue; }
+  .active { background: $orange; }
+  .completed { background: $green; }
+  .overdue { background: $red; }
+}

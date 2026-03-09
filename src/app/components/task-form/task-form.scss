@@ -1,0 +1,148 @@
+@use "sass:color";
+
+// Variables
+$primary-color: #007bff;
+$primary-dark: #0056b3;
+$error-color: #dc3545;
+$background-color: #f8f9fa;
+$input-border: #ccc;
+$label-color: #495057;
+
+// Form container
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: $background-color;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 0 auto;
+
+  .row {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .field {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  // Inputs, selects, textareas
+  input,
+  select,
+  textarea {
+    padding: 14px 10px 4px 10px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid $input-border;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
+
+    &:focus {
+      outline: none;
+      border-color: $primary-color;
+      box-shadow: 0 0 0 3px rgba($primary-color, 0.15);
+    }
+
+    &:hover {
+      border-color: color.scale($primary-color, $lightness: 20%);
+    }
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+
+  // Floating labels
+  label {
+    position: absolute;
+    top: 14px;
+    left: 10px;
+    color: $label-color;
+    font-size: 14px;
+    pointer-events: none;
+    transition: all 0.2s ease-out;
+    background-color: $background-color;
+    padding: 0 4px;
+  }
+
+  input:focus + label,
+  input:not(:placeholder-shown) + label,
+  textarea:focus + label,
+  textarea:not(:placeholder-shown) + label,
+  select:focus + label,
+  select:not([value=""]) + label {
+    top: -6px;
+    font-size: 12px;
+    color: $primary-color;
+  }
+
+  // Buttons
+  button {
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background: linear-gradient(90deg, $primary-color, $primary-dark);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+
+    &:hover:not(:disabled) {
+      background: linear-gradient(
+        90deg,
+        $primary-dark,
+        color.scale($primary-dark, $lightness: -20%)
+      );
+      transform: translateY(-2px);
+      box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+    }
+
+    &:disabled {
+      background-color: #aaa;
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+  }
+
+  // Angular invalid fields
+  input.ng-invalid.ng-touched,
+  textarea.ng-invalid.ng-touched,
+  select.ng-invalid.ng-touched {
+    border-color: $error-color;
+    animation: shake 0.15s;
+  }
+}
+
+// Shake animation
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-3px); }
+  50% { transform: translateX(3px); }
+  75% { transform: translateX(-3px); }
+  100% { transform: translateX(0); }
+}
+
+// Responsive
+@media (max-width: 480px) {
+  .form {
+    padding: 12px;
+
+    input, select, textarea {
+      font-size: 13px;
+    }
+
+    button {
+      padding: 10px;
+      font-size: 14px;
+    }
+  }
+}
