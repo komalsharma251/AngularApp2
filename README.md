@@ -1,59 +1,140 @@
-# TaskManager
+Angular Daily Task Manager
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.5.
+A simple and responsive task management application built with Angular 14+. This project demonstrates standalone components, reactive forms, directives, pipes, and RxJS for state management.
 
-## Development server
+Table of Contents
 
-To start a local development server, run:
+Project Overview
 
-```bash
+Features
+
+Technologies Used
+
+Project Structure
+
+Setup & Installation
+
+Usage
+
+Components & Services
+
+Screenshots
+
+Future Improvements
+
+Project Overview
+
+This Angular Task Manager allows users to:
+
+Add, update, and delete tasks
+
+Mark tasks as completed
+
+Filter tasks by status: All, Active, Completed, Overdue
+
+View task statistics (total, active, completed, overdue)
+
+Visualize task priority with color-coded indicators
+
+Truncate long descriptions for a clean UI
+
+Automatically highlight overdue tasks
+
+This project demonstrates clean Angular architecture using standalone components, services for state management, and reusable pipes and directives.
+
+Features
+
+Add Task: Fill out a form to create new tasks with title, description, due date, and priority.
+
+Edit / Toggle Task: Mark tasks as completed or update task details.
+
+Delete / Clear Tasks: Remove single or completed tasks.
+
+Filter Tasks: View tasks by status: active, completed, overdue, or all.
+
+Statistics Panel: Live statistics of tasks.
+
+Custom Pipes & Directives:
+
+DueDateLabelPipe → formats dates and highlights overdue tasks
+
+TruncatePipe → truncates long descriptions
+
+TaskStatusDirective → visually styles tasks by completion and priority
+
+Technologies Used
+
+Angular 14+ (Standalone Components)
+
+RxJS (BehaviorSubjects & Observables)
+
+Reactive Forms
+
+SCSS / CSS for styling
+
+TypeScript
+
+Git & GitHub
+
+Project Structure
+src/app/
+├── components/
+│   ├── task-form/
+│   ├── task-list/
+│   ├── task-item/
+│   └── stats-panel/
+├── directives/
+│   └── task-status.directive.ts
+├── pipes/
+│   ├── due-date-label.pipe.ts
+│   └── truncate.pipe.ts
+├── services/
+│   └── task.service.ts
+├── models/
+│   └── task.model.ts
+├── app.html
+├── app.scss
+└── app.ts
+Setup & Installation
+
+Clone the repository
+
+git clone https://github.com/yourusername/AngularApp2.git
+cd AngularApp2
+
+Install dependencies
+
+npm install
+
+Run the development server
+
 ng serve
-```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Open http://localhost:4200 in your browser to see the app.
 
-## Code scaffolding
+Usage
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Fill in the task title, optional description, due date, and priority.
 
-```bash
-ng generate component component-name
-```
+Click Add Task to create a new task.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Use filters to view specific tasks (all, active, completed, overdue).
 
-```bash
-ng generate --help
-```
+Toggle completion by clicking on a task, or delete a task using the remove button.
 
-## Building
+The Stats Panel shows live updates on task counts.
 
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
+Components & Services
+Component / Directive / Pipe	Description
+TaskFormComponent	Form for creating new tasks
+TaskListComponent	Displays list of tasks with filtering
+TaskItemComponent	Represents a single task with actions
+StatsPanel	Displays task statistics
+TaskStatusDirective	Applies styles based on completion & priority
+DueDateLabelPipe	Formats due dates and labels overdue tasks
+TruncatePipe	Truncates long text for UI clarity
+TaskService	Centralized service for managing task state using RxJS
+Screenshots
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
