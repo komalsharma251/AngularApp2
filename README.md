@@ -1,84 +1,70 @@
-Angular Task Manager
+# Angular Daily Task Manager
 
-A modern and responsive task management application built with Angular 14+, showcasing standalone components, reactive forms, directives, pipes, and RxJS for reactive state management.
+![Angular](https://img.shields.io/badge/Angular-14+-DD0031?logo=angular&logoColor=white) ![RxJS](https://img.shields.io/badge/RxJS-7.8.0-FF6D00?logo=rxjs&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-4.9-blue?logo=typescript&logoColor=white) ![License](https://img.shields.io/badge/License-MIT-green)
 
-Table of Contents
+A modern and responsive **task management application** built with **Angular 14+**, showcasing **standalone components, reactive forms, directives, pipes, and RxJS** for reactive state management.  
 
-Project Overview
+---
 
-Features
+### Table of Contents
 
-Technologies Used
+- [Project Overview](#project-overview)  
+- [Features](#features)  
+- [Technologies Used](#technologies-used)  
+- [Project Structure](#project-structure)  
+- [Setup & Installation](#setup--installation)  
+- [Usage](#usage)  
+- [Components & Services](#components--services)  
+- [Screenshots](#screenshots)  
+- [Future Improvements](#future-improvements)  
+- [License](#license)  
 
-Project Structure
+---
 
-Setup & Installation
-
-Usage
-
-Components & Services
-
-Screenshots
-
-Future Improvements
-
-License
-
-Project Overview
+### Project Overview
 
 Angular Task Manager lets users:
 
-Add, update, and delete tasks
+- Add, update, and delete tasks  
+- Mark tasks as completed  
+- Filter tasks by status: **All**, **Active**, **Completed**, **Overdue**  
+- View task statistics (total, active, completed, overdue)  
+- Visualize task priority with color-coded indicators  
+- Truncate long descriptions for a clean UI  
+- Automatically highlight overdue tasks  
 
-Mark tasks as completed
+It demonstrates a **clean architecture** with standalone components, centralized services, reusable pipes, and directives.  
 
-Filter tasks by status: All, Active, Completed, Overdue
+---
 
-View task statistics (total, active, completed, overdue)
+### Features
 
-Visualize task priority with color-coded indicators
+- **Add Task:** Create new tasks with title, description, due date, and priority  
+- **Edit / Toggle Task:** Update completion status easily  
+- **Delete / Clear Tasks:** Remove single or completed tasks  
+- **Filter Tasks:** Filter by active, completed, overdue, or all tasks  
+- **Statistics Panel:** Displays live task statistics  
+- **Custom Pipes & Directives:**  
+  - `DueDateLabelPipe` → formats dates and labels overdue tasks  
+  - `TruncatePipe` → truncates long descriptions  
+  - `TaskStatusDirective` → visually styles tasks by completion & priority  
 
-Truncate long descriptions for a clean UI
+---
 
-Automatically highlight overdue tasks
+### Technologies Used
 
-It demonstrates a clean architecture with standalone components, centralized services, reusable pipes, and directives.
+- **Angular 14+** (Standalone Components)  
+- **RxJS** (BehaviorSubjects & Observables)  
+- **Reactive Forms**  
+- **SCSS / CSS** for styling  
+- **TypeScript**  
+- **Git & GitHub**  
 
-Features
+---
 
-Add Task: Create new tasks with title, description, due date, and priority
+### Project Structure
 
-Edit / Toggle Task: Update completion status easily
-
-Delete / Clear Tasks: Remove single or completed tasks
-
-Filter Tasks: Filter by active, completed, overdue, or all tasks
-
-Statistics Panel: Displays live task statistics
-
-Custom Pipes & Directives:
-
-DueDateLabelPipe → formats dates and labels overdue tasks
-
-TruncatePipe → truncates long descriptions
-
-TaskStatusDirective → visually styles tasks by completion & priority
-
-Technologies Used
-
-Angular 14+ (Standalone Components)
-
-RxJS (BehaviorSubjects & Observables)
-
-Reactive Forms
-
-SCSS / CSS for styling
-
-TypeScript
-
-Git & GitHub
-
-Project Structure
+```bash
 src/app/
 ├── components/
 │   ├── task-form/
@@ -137,5 +123,3 @@ DueDateLabelPipe	Formats due dates, labels overdue tasks
 TruncatePipe	Truncates long task descriptions
 TaskService	Manages task state using RxJS
 Screenshots
-
-(Optional – Add your own screenshots for clarity)
