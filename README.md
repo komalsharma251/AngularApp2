@@ -122,6 +122,7 @@ DueDateLabelPipe	Formats due dates, labels overdue tasks
 TruncatePipe	Truncates long task descriptions
 TaskService	Manages task state using RxJS
 Screenshots
+
 ![Task Form](public/assets/image1.png)
 ![Fill Task Form](public/assets/image2.png)
 ![Task Added](public/assets/image3.png)
