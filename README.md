@@ -5,7 +5,6 @@
 A modern and responsive **task management application** built with **Angular 14+**, showcasing **standalone components, reactive forms, directives, pipes, and RxJS** for reactive state management.  
 
 ---
-
 ### Table of Contents
 
 - [Project Overview](#project-overview)  
