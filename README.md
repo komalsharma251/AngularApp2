@@ -1,67 +1,10 @@
-# Angular Daily Task Manager
+# TaskManager
 
-![Angular](https://img.shields.io/badge/Angular-14+-DD0031?logo=angular&logoColor=white) ![RxJS](https://img.shields.io/badge/RxJS-7.8.0-FF6D00?logo=rxjs&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-4.9-blue?logo=typescript&logoColor=white) ![License](https://img.shields.io/badge/License-MIT-green)
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.5.
 
-A modern and responsive **task management application** built with **Angular 14+**, showcasing **standalone components, reactive forms, directives, pipes, and RxJS** for reactive state management.  
+## Development server
 
----
-
-### Table of Contents
-
-- [Project Overview](#project-overview)  
-- [Features](#features)  
-- [Technologies Used](#technologies-used)  
-- [Project Structure](#project-structure)  
-- [Setup & Installation](#setup--installation)  
-- [Usage](#usage)  
-- [Components & Services](#components--services)  
-- [Screenshots](#screenshots)    
-- [License](#license)  
-
----
-
-### Project Overview
-
-Angular Task Manager lets users:
-
-- Add, update, and delete tasks  
-- Mark tasks as completed  
-- Filter tasks by status: **All**, **Active**, **Completed**, **Overdue**  
-- View task statistics (total, active, completed, overdue)  
-- Visualize task priority with color-coded indicators  
-- Truncate long descriptions for a clean UI  
-- Automatically highlight overdue tasks  
-
-It demonstrates a **clean architecture** with standalone components, centralized services, reusable pipes, and directives.  
-
----
-
-### Features
-
-- **Add Task:** Create new tasks with title, description, due date, and priority  
-- **Edit / Toggle Task:** Update completion status easily  
-- **Delete / Clear Tasks:** Remove single or completed tasks  
-- **Filter Tasks:** Filter by active, completed, overdue, or all tasks  
-- **Statistics Panel:** Displays live task statistics  
-- **Custom Pipes & Directives:**  
-  - `DueDateLabelPipe` → formats dates and labels overdue tasks  
-  - `TruncatePipe` → truncates long descriptions  
-  - `TaskStatusDirective` → visually styles tasks by completion & priority  
-
----
-
-### Technologies Used
-
-- **Angular 14+** (Standalone Components)  
-- **RxJS** (BehaviorSubjects & Observables)  
-- **Reactive Forms**  
-- **SCSS / CSS** for styling  
-- **TypeScript**  
-- **Git & GitHub**  
-
----
-
-### Project Structure
+To start a local development server, run:
 
 ```bash
 src/app/
