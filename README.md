@@ -66,7 +66,7 @@ TruncatePipe	Truncates long task descriptions
 TaskService	Manages task state using RxJS
 Screenshots
 
-![Task Form](public//assets/image1.png)
+![Task Form](public/assets/image1.png)
 ![Fill Task Form](public/assets/image2.png)
 ![Task Added](public/assets/image3.png)
 ![Displaying Tasks](public/assets/image4.png)
